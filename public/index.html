@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox-like | Мини версия</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="hud">
+            <div id="player-info">
+                <span id="username">Загрузка...</span>
+                <div id="health">❤ 100</div>
+            </div>
+            <div id="chat">
+                <div id="chat-messages"></div>
+                <input type="text" id="chat-input" placeholder="Напишите сообщение...">
+            </div>
+            <div id="tools">
+                <button onclick="createCube()">➕ Создать куб</button>
+                <button onclick="removeLastObject()">🗑 Удалить последний</button>
+            </div>
+        </div>
+        <div id="menu">
+            <h1>🎮 Roblox-like</h1>
+            <input type="text" id="username-input" placeholder="Введите имя" maxlength="20">
+            <button onclick="joinGame()">Играть</button>
+            <div id="players-online">Игроков онлайн: 0</div>
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
